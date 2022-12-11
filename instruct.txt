@@ -1,0 +1,14 @@
+#aws config
+criar bucket
+criar lambda
+configure timeout on general configs to 5minutes (only 30secs is necessary)
+permitir readOnly acesso readOnly s3 na função que roda o lambda, pelo IAM 
+install aws cli and configure with acceskey and scret key in app.py
+
+
+
+#to local run (SAM)
+sam local invoke -e ./events/event.json CsvToDbFunction --region us-east-1
+install SAM
+install Docker
+
