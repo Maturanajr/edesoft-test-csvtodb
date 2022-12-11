@@ -1,10 +1,13 @@
 import sqlalchemy
 import pandas as pd
 import os
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
 
-#loads enviroment variables for db
-load_dotenv()
+    #loads enviroment variables for db
+    load_dotenv()
+except:
+    pass
 DBHOST=os.getenv('DBHOST')
 DBNAME= os.getenv('DBNAME')
 DBPASS= os.getenv('DBPASS')
