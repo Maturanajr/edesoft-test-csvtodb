@@ -1,4 +1,19 @@
 
+# Edesoft test - CSV to DB
+
+This is a function created to be executed in Lambda AWS.
+The porpuse is read a .csv file in a bucket from S3 AWS and insert this on a MySql DB running in RDS AWS.
+
+
+## Execute
+
+To execute the lambda function on my Aws execute the following code:
+```bash
+  curl -v -X POST -H "Content-Type: application/json" -d '{"""object_key""":"""arquivo_exemplo.csv""","""bucket_name""":"""bucket-edesoft"""}' https://ui5ohcrvrdtyzgo7dhlkl5r2tu0mvmxh.lambda-url.us-east-1.on.aws
+```
+Where "object_key" is the csv file name and "bucket_name" is the bucket from S3.
+
+You can POST for this URL with other methods you want.
 ## Install
 
 There is 2 ways to install and test the code. 
