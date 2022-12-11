@@ -17,8 +17,15 @@ def connect_s3():
         return False
 
 def lambda_handler(event, context):
-    filename = event['object_key']
-    s3bucket = event['bucket_name']
+    try:
+        event = json.loads(event['body'])
+    except Exception as e:
+        print(e)
+    try:
+        filename = event['object_key']
+        s3bucket = event['bucket_name']
+    except:
+        return {"statusCode": 500,"body": json.dumps({"error": "incorrect parameters received",}),}
     #connect to s3
     conn = connect_s3()
     if not conn:
