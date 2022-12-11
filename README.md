@@ -14,11 +14,17 @@ To execute the lambda function on my Aws execute the following code:
 Where "object_key" is the csv file name and "bucket_name" is the bucket from S3.
 
 You can POST for this URL with other methods you want.
-## Install
+## Install to own usage
 
 There is 2 ways to install and test the code. 
 
 Uploading zipfile directly to Lambda or using SAM CLI.
+
+### Create MySQL database
+First of all you will need a MySQL database. For this project i have used RDS Aws to host my DB.
+
+Create a Table with any name, using the base struct in "CREATE TABLE CESSAO_FUNDO.sql" (avaliable in this repository)
+
 
 ### METHOD 1: Uploading zipfile to Lambda
 1: Create a Lambda function in AWS with any name.
