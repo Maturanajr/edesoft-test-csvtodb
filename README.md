@@ -7,7 +7,7 @@ The porpuse is read a .csv file in a bucket from S3 AWS and insert this on a MyS
 
 ## Execute
 
-To execute the lambda function on my Aws execute the following code:
+To execute the lambda function on my Aws execute the following code from your terminal:
 ```bash
   curl -v -X POST -H "Content-Type: application/json" -d '{"""object_key""":"""arquivo_exemplo.csv""","""bucket_name""":"""bucket-edesoft"""}' https://ui5ohcrvrdtyzgo7dhlkl5r2tu0mvmxh.lambda-url.us-east-1.on.aws
 ```
